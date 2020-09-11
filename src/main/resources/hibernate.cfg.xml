@@ -11,12 +11,15 @@
         <property name="connection.url">jdbc:mysql://localhost:55555/hb_student_tracker?useSSL=false&amp;serverTimezone=UTC</property>
         <property name="connection.username">hbstudent</property>
         <property name="connection.password">hbstudent</property>
+        
+        <!-- create/update tables (only adding of columns) on startup -->
+        <property name="hibernate.hbm2ddl.auto">update</property> 
 
         <!-- JDBC connection pool settings ... using built-in test pool -->
         <property name="connection.pool_size">1</property>
 
         <!-- Select our SQL dialect -->
-        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
 
         <!-- Echo the SQL to stdout -->
         <property name="show_sql">true</property>
