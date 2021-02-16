@@ -55,6 +55,8 @@
 				<appender-ref ref="CONSOLE" />
 				<appender-ref ref="FILE-ROLLING" />
 			</root>
+			<!-- enable trace level for hibernate to print sql bind parameter values for queries -->
+			<logger name="org.hibernate" level="TRACE" />
 		</then>
 	</if>
 
